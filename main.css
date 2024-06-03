@@ -1,0 +1,252 @@
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,800');
+*{
+    margin: 0;
+    padding: 0;
+    font-family:" poppins",sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: .4s linear;
+}
+
+body{
+    height: 100vh;
+    background-size: cover;
+    background-image: url(https://tindoncongnghe.com/wp-content/uploads/2023/04/hinh-nen-iphone-cuc-quang-dep-huyen-ao-thumb-1.jpg);
+}
+
+header{
+    width: 100%;
+    padding: 15px 5%;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    font-size: 35px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 500;
+}
+
+header nav a{
+    font-size: 18px;
+    text-transform: capitalize;
+    padding: 8px;
+    color: #fff;
+    font-weight: 500;
+}
+
+header nav a::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    top: 100%;
+    transform: scale(0);
+    transition: .4s ease;
+
+}
+
+/* header nav a:hover{
+    transform: scale(0);
+    transition:  .4s ease;
+} */
+
+header nav a:hover::before{
+    transform: scale(1);
+}
+
+.button a{
+    display: inline-block;
+    padding: 10px 30px;
+    border:  #fff solid 2px;
+    border-radius: 10px;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 10px;
+    transition:  .4s ease-in-out;
+
+}
+.button a:focus{
+    transform: scale(0.95);
+    background-color: #fff;
+    color:#000;
+}
+
+
+/*--------------strat section home----------------------*/
+
+.home{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .container{
+    width: 400px;
+    height: 450px;
+    position: relative;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+}
+
+.home .container form h1{
+    text-align: center;
+    font-size: 35px;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #fff;
+}
+
+.home .container .input-box{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin: 30px 0;
+}
+
+.home .container .input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(225,225,255,.2);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 15px;
+}
+
+.home .container .input-box input::placeholder{
+    text-transform: capitalize;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.home .container .input-box i{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: #fff;
+}
+
+.home .container .remember{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin:  -15px 0 15px;
+}
+
+.home .container .remember label{
+    color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+}
+
+.home .container .remember input{
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    accent-color: #0ef;
+}
+
+.home .container .remember a{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #fff;
+    transition:  .4s ease;
+}
+
+.home .container .remember a:hover{
+    color: #0ef;
+}
+
+.home .container .button{
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    color: #000;
+    background-color:  rgba(225,225,255,.9);
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    margin: 15px 0 20px;
+    transition: .4s ease;
+}
+
+.home .container .button:hover{
+    background-color: rgba(225,225,255,.7);
+}
+
+.home .container .button:focus{
+    transform: scale(0.95);
+}
+
+.home .container .register{
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.home .container .register a{
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 18px;
+    transition: .4s ease;
+}
+
+.home .container .register a:hover{
+    text-decoration: underline 3px;
+    color: #0ef;
+}
+
+.container form{
+    position: absolute;
+    width: 100%;
+    padding: 30px 20px;
+}
+
+.container .form-register{
+    right: -100%;
+    transition: .4s linear;
+    opacity: 0;
+}
+
+.container.active{
+    height: 510px;
+}
+.container .login{
+    left: 0;
+    transition: .4s linear;
+    opacity: 1;
+}
+.container.active .login{
+    left: -100%;
+    opacity: 0;
+}
+
+.container.active .form-register{
+    right: 0;
+    opacity: 1;
+}
